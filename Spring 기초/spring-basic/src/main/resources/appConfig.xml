@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Member 빈 등록 -->
+    <bean id="member" class="com.ogu1208.common.Member">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="Ogu"/>
+        <constructor-arg index="2">
+            <value type="com.ogu1208.common.Grade">FAMILY</value>
+        </constructor-arg>
+    </bean>
+
+    <!-- MemberRepository 빈 등록 -->
+    <bean id="memberRepository" class="com.ogu1208.common.MemberRepository"/>
+
+</beans>
